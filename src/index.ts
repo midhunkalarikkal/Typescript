@@ -1,18 +1,6 @@
-// let user: [number, string, boolean] = [1,"midhun",true]
-// console.log(user)
-// user.push(100)
-// console.log(user)
+let message : string = "Hello world"
 
-// class User{
-//     constructor(public id : number, public name : string){
+let heading = document.createElement('h1')
+heading.textContent = message
 
-//     }
-// }
-
-// let userOne = new User(1,"midhun")
-// console.log("userOne : ",userOne)
-
-// const enum Size  {small , medium , large}
-// let mySize : Size = Size.medium
-// console.log(mySize)
-
+document.body.appendChild(heading)
