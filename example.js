@@ -1,3 +1,5 @@
+// /DYNAMIC TYPING IN JAVASCRIPT
+
 // EXAMPLE ONE
 // ===============
 
@@ -11,7 +13,8 @@
 
 // console.log(`The product ${product.Name} cost ${product.price}`)
 
-// In this the name is called as Name the error we will get only in the runtime as undefined 
+// In this the name is called as Name the error we will get only in the runtime as undefined
+// Referencing a property that doesnt existin on an object
 
 
 // EXAMPLE TWO
