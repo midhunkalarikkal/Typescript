@@ -63,3 +63,14 @@
 
 // console.log(greeting('midhun'))
 
+
+// EXAMPLE SEVEN
+// ================
+
+// let message : (name : string, age : number) => string;
+
+// message = function(name : string , age : number) {
+//     return `Hi ${name} your entered age is ${age}`
+// }
+
+// console.log(message("midhun",24))
