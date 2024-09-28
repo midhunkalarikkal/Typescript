@@ -11,4 +11,3 @@ colour = [1,2,3]
 
 console.log("rgb : ",rgb)
 console.log("colour : ",colour)
-
