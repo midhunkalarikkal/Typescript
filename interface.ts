@@ -15,7 +15,7 @@ interface Person {
     lname: "doe",
   };
   
-  console.log(getFullName(jony));
+//   console.log(getFullName(jony));
   
 
 // To make code more concise
@@ -73,7 +73,7 @@ interface FutureMailable extends Mailable {
 // ----------------------------
 
 class Control {
-    private state: boolean;
+    // private state: boolean;
 }
 
 interface StatefulControl extends Control {
@@ -90,7 +90,7 @@ class Label extends Control { }
 
 
 // Error: cannot implement
-class Chart implements StatefulControl {
-    enable() { }
+// class Chart implements StatefulControl {
+    // enable() { }
 
-}
+// }
