@@ -27,25 +27,22 @@
 import {prompt} from './input'
 
 const input : string = prompt("Enter your total mark : ")
-const totalMark : number = Math.floor(Number(input) / 10)
+const totalMark : number = Number(input)
 
-switch(totalMark){
-    case 9 : 
-        console.log("Grade A");
-        break;
-    case 8 : 
-        console.log("Grade B");
-        break;
-    case 7 : 
-        console.log("Grade C");
-        break;
-    case 6 : 
-        console.log("Grade D");
-        break;
-    case 5 : 
-        console.log("Grade E");
-        break;
-    default :
-        console.log("Failed");
-        break;
+if(totalMark >= 90 && totalMark <= 100){
+    console.log("Grade A")
+}else if(totalMark >= 80 && totalMark <= 89){
+    console.log("Grade B")
+}else if(totalMark >= 70 && totalMark <= 79){
+    console.log("Grade C")
+}else if(totalMark >= 60 && totalMark <= 69){
+    console.log("Grade D")
+}else if(totalMark >= 50 && totalMark <= 59){
+    console.log("Grade E")
+}else if(totalMark < 50){
+    console.log("Failed")
+}else{
+    console.log("Enter a valid mark.")
 }
+
+
