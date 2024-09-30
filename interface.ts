@@ -56,3 +56,41 @@ class cp implements json{
 
 const cp1 = new cp("john","doe")
 console.log(cp1.toJson())
+
+// interface Extends interface
+// ---------------------
+
+interface Mailable{
+    send(email: string): boolean
+    queue(email: string): boolean
+}
+
+interface FutureMailable extends Mailable {
+    later(email: string, after: number): boolean
+}
+
+// interface extends class
+// ----------------------------
+
+class Control {
+    private state: boolean;
+}
+
+interface StatefulControl extends Control {
+    enable(): void
+}
+
+class Button extends Control implements StatefulControl {
+    enable() { }
+}
+class TextBox extends Control implements StatefulControl {
+    enable() { }
+}
+class Label extends Control { }
+
+
+// Error: cannot implement
+class Chart implements StatefulControl {
+    enable() { }
+
+}
