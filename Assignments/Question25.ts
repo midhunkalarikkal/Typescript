@@ -26,13 +26,13 @@ var library = [
 
 */
 
-type Book = {
+type BookOne = {
     title: string;
     author: string;
     readingStatus: boolean;
 };
 
-var library : Book[] = [ 
+var library : BookOne[] = [ 
     {
         title: 'Bill Gates',
         author: 'The Road Ahead',
@@ -50,7 +50,7 @@ var library : Book[] = [
     }
 ];
 
-function displayStatus(library : Book[]) : void{
+function displayStatus(library : BookOne[]) : void{
     for (const book of library) {
         if (book.readingStatus) {
             console.log(`Already read '${book.title}' by ${book.author}.`);
