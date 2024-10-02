@@ -32,7 +32,7 @@ type BookOne = {
     readingStatus: boolean;
 };
 
-var library : BookOne[] = [ 
+var libraryOne : BookOne[] = [ 
     {
         title: 'Bill Gates',
         author: 'The Road Ahead',
@@ -60,4 +60,4 @@ function displayStatus(library : BookOne[]) : void{
     }
 }
 
-displayStatus(library)
+displayStatus(libraryOne)
