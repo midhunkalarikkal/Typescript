@@ -1,27 +1,28 @@
-abstract class Employ{
-    constructor(private firstName: string, private lastName: string) {}
-    abstract getSalary(): number;
+abstract class Animal {
+    abstract makeSound(): void;
 
-    get fullName(): string {
-        return `${this.firstName} ${this.lastName}`;
-    }
-
-    compensationStatement(): string {
-        return `${this.fullName} makes ${this.getSalary()} a month.`;
+    move(): void {
+        console.log("Moving...");
     }
 }
 
-class FullTimeEmployee extends Employ {
-    constructor(firstName: string, lastName: string, private salary: number) {
-        super(firstName, lastName);
+class Dog extends Animal {
+    makeSound(): void {
+        console.log("Woof!");
     }
-    getSalary(): number {
-        return this.salary;
+}
+
+class Cat extends Animal {
+    makeSound(): void {
+        console.log("Meow!");
     }
 }
 
 
-// he constructor declares the firstName and lastName properties.
-// The getSalary() method is an abstract method. The derived class will implement the logic based on the type of employee.
-// The getFullName() and compensationStatement() methods contain detailed implementation. Note that the compensationStatement() method calls the getSalary() method.
-// Because the Employee class is abstract, you cannot create a new object from it. The following statement causes an error:
+const dog = new Dog();
+dog.makeSound(); 
+dog.move();      
+
+const cat = new Cat();
+cat.makeSound(); 
+cat.move();    
