@@ -1,32 +1,30 @@
-class Gsperson{
-    private _age : number;
-    private _fname : string;
-    private _lname : string;
-
-    constructor(age : number , fname : string , lname : string){
-        this._age = age
-        this._fname = fname
-        this._lname = lname
+class PersonTwo {
+    private _age: number;
+  
+    constructor(age: number) {
+      this._age = age;
     }
-
-    public get age(){
-        return this._age;
+  
+    get age(): number {
+      return this._age;
     }
-
-    public set age(theAge : number){
-        if(theAge <= 0 || theAge >= 100){
-            throw new Error("Error")
-        }
-        this._age = theAge;
+  
+    set age(newAge: number) {
+      if (newAge >= 0) {
+        this._age = newAge;
+      } else {
+        console.log("Invalid age");
+      }
     }
+  }
+  
+  const p = new PersonTwo(30);
 
-    public getFullName() : string {
-        return `"Hi" ${this._fname} ${this._lname}`
-    }
-}
-const newPerson = new Gsperson(21 , "Midhun" , "Paniker")
-console.log(newPerson)
-newPerson.age = 10
-console.log(newPerson)
-// newPerson.age = 0  // Make an error becaus eof set function
-// console.log(newPerson)
+  console.log(`Age: ${p.age}`);  // calls get
+  
+  p.age = 28;  // calls set
+  
+  console.log(`Updated Age: ${p.age}`);
+  
+  p.age = -5;
+  
