@@ -27,3 +27,35 @@ class Library{
         })
     }
 }
+
+class Book{
+    title : string;
+    author : string;
+    ISBN : string;
+    available : boolean;
+
+    constructor(title : string, author : string, ISBN : string, available : boolean){
+        this.title = title
+        this.author = author
+        this.ISBN = ISBN
+        this.available = available;
+    }
+
+    checkAvailability() : boolean{
+        return this.available
+    }
+
+    borrowBook(): void{
+        if(this.available){
+            this.available = false
+            console.log(`${this.title} has been borrowed.`)
+        }else{
+            console.log(`${this.title} is currently unavailable.`)
+        }
+    }
+    
+    returnBook() : void{
+        this.available = true
+        console.log(`${this.title} has been returned.`)
+    }
+}
