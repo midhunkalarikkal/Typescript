@@ -1,11 +1,11 @@
 // Rest parameter
-
 function addrestpara(...nums : number[]) : number {
     return nums.reduce((a : number , b : number )=> a + b , 0)
 }
 
 console.log(addrestpara(1,2,3,4,5))
 console.log(addrestpara())
+
 
 // Rest parameter with multiple type
 // it is using the unon type
