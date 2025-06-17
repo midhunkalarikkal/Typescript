@@ -1,3 +1,3 @@
-### TYPESCRIPT
+# TYPESCRIPT
 
-# Sample codes and assignments
+### Sample codes and assignments
